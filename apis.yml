@@ -1,23 +1,66 @@
 aid: beeyond-media
+
 name: Beeyond Media
-description: 'Beeyond Media is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+
+image: https://beeyondmedia.com/images/beeyond.jpg
+
+description: 'Beeyond Media provides a programmatic digital out‑of‑home (DOOH) advertising platform that connects brands and agencies with over 2.1 million billboards and screens worldwide. Their solution enables premium, data‑driven campaigns, real‑time inventory management, and detailed performance analytics for elite advertisers.'
+
 url: https://raw.githubusercontent.com/api-evangelist/beeyond-media/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-27 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-27'
+
 modified: '2026-09-27'
+
 tags:
+- Advertising
+- DOOH
+- Programmatic
+- MediaTech
 - Company
-apis: []
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Hosts
+  url: hosts/beeyond-media-hosts.yml
+- type: PrivacyPolicy
+  url: https://beeyondmedia.com/privacy-policy
+- type: Newsroom
+  url: https://www.beeyondmedia.com/news
+- type: Blog
+  url: https://beeyondmedia.com/blog
+- type: DomainSecurity
+  url: security/beeyond-media-domain-security.yml
 - type: Website
-  url: https://www.nasdaqprivatemarket.com/
+  url: https://beeyondmedia.com
+
+apis: []
+
+x-coverage:
+  state: none
+  reason: no-developer-program
+  detail: "The site provides no developer documentation or API endpoints, only a marketing website."
+  evidence:
+    - url: https://beeyondmedia.com
+      status: 200
+  checked: '2026-09-27'
+x-enrichment:
+  date: '2026-09-27'
+  status: enriched
+  artifacts_added: 6
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local
